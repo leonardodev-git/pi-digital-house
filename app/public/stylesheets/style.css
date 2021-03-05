@@ -1,0 +1,43 @@
+body {
+    background: #F4F6FB;
+    background-image: url('/images/ilustracao.svg');
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: bottom 0px left 0px;
+}
+
+.logo {
+    width: 121px;
+    max-width: 100%;
+    margin: 0px auto;
+}
+
+.cadastro {
+    display: flex;
+    justify-content: space-around;
+    font-size: 24px;
+}
+
+.index {
+    margin-top: 82px;
+}
+
+.form {
+    background-color: #ffff;
+    padding: 30px;
+}
+
+.input-maior {
+    margin: 10px auto;
+    max-width: 90%;
+}
+
+.descricao {
+    text-align: center;
+}
+
+.ilustracao {
+    position: absolute;
+    width: 50%;
+}
+

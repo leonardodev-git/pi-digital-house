@@ -1,0 +1,46 @@
+body {
+  background: #F4F6FB;
+}
+
+.container-fluid {
+  padding: 20px;
+}
+
+.nav {
+  background: #1E1E1E;
+  border-radius: 8px;
+  color: #FFFFFF;
+}
+
+.nav > img {
+  width: 150px;
+  height: 150px;
+  max-width: 100%;
+  border-radius: 40px;
+  border: 1px solid #707070;
+  margin: 70px auto;
+}
+
+.nav-lista {
+  background: #1E1E1E;
+  color: #FFFFFF;
+}
+
+.nav-info {
+  margin: 0px auto 150px auto;
+}
+
+.agendamento {
+  background: #FFFFFF;
+  border-radius: 15px;
+  
+}
+
+.teste {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 30px;
+  margin: 0px;
+  border: 1px solid black;
+  
+}
