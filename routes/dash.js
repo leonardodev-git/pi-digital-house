@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var controller = require('../controllers/dash-controller')
+var dashcontroller = require('../controllers/dash-controller')
 
 
 /* GET users listing. */
-router.get('/', controller.index);
+router.get('/', dashcontroller.index);
 
 module.exports = router;

@@ -27,6 +27,10 @@ body {
     padding: 30px;
 }
 
+.form-login {
+    padding: 60px;
+}
+
 .input-maior {
     margin: 10px auto;
     max-width: 90%;
@@ -40,4 +44,6 @@ body {
     position: absolute;
     width: 50%;
 }
+
+
 

@@ -44,3 +44,11 @@ body {
   border: 1px solid black;
   
 }
+.teste > ul{
+  list-style-type: none;
+}
+.teste > ul >li > img{
+    
+    width: 80px;
+    border: 1px solid black;
+}
