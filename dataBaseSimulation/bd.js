@@ -2,31 +2,31 @@ let barbeiro = [
   {
     nome: 'Leo-fodão',
     especialidade: 'Cabelo',
-    img: 'barPerfilTemp1.png',
+    img: '/images/imagem.png',
   },
   {
     nome: 'Bruno-Xato',
     especialidade: 'Barba',
-    img: 'barPerfilTemp2.png',
+    img: '/images/imagem.png',
   },
   {
     nome: 'Lobao-falador',
     especialidade: 'barba',
-    img: 'barPerfilTemp3.png',
+    img: '/images/imagem.png',
   },
   {
     nome: 'Eduardo-calado',
     especialidade: 'unha',
-    img: 'barPerfilTemp4.png',
+    img: '/images/imagem.png',
   }, {
     nome: 'Leo-fodão',
     especialidade: 'Cabelo',
-    img: 'barPerfilTemp1.png',
+    img: '/images/imagem.png',
   },
   {
     nome: 'Bruno-Xato',
     especialidade: 'Barba',
-    img: 'barPerfilTemp2.png',
+    img: '/images/imagem.png',
   },
 
 ]

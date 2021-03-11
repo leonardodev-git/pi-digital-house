@@ -39,11 +39,19 @@ body {
 .teste {
   background: #FFFFFF;
   border-radius: 8px;
-  padding: 30px;
+  padding: 15px;
   margin: 0px;
   border: 1px solid black;
-  
+ }
+
+ .profissionais {
+  border-radius: 8px;
 }
+
+.disponiveis {
+  padding: 10px;
+}
+
 .teste > ul{
   list-style-type: none;
 }
@@ -51,4 +59,63 @@ body {
     
     width: 80px;
     border: 1px solid black;
+}
+.teste > p {
+text-align: center;
+}
+
+.info-agenda {
+  margin: 10px;
+  width: 200px;
+  max-width: 100%;
+  max-height: 30%;
+}
+
+.barbershop {
+  width: 447px;
+  max-width: 100%;
+  height: 100%;
+}
+.barberLogo {
+  width: 148px;
+  max-width: 100%;
+}
+
+.col > p {
+  text-align: start;
+  font-size: 0.8em;
+}
+
+.fotoProfissionais {
+  max-width: 100%;
+  margin: 0px auto;
+}
+
+.input-agenda {
+  min-width: 100%;
+}
+
+.fotoAgendamento {
+  width: 50px;
+  margin-bottom: 15px;
+}
+
+.lista-agendamento {
+  background-color: #FFC056;
+  margin: 20px;
+  border-radius: 10px;
+  opacity: 0.8;
+  
+}
+
+.input-agendamento {
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.detalhe {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 5px; 
+
 }

@@ -28,20 +28,20 @@
                     <div class="cadastro">
                     <span>Login</span>
                     </div>
-                    <form action="">
+                    <form action="/login" method="POST">
                         <div class="row">
 
                             <small id="passwordHelpBlock" class="form-text text-muted descricao">
                                 Endereço de e-mail
                              </small>
-                            <input type="password" id="inputPassword5" class="form-control input-maior"
-                                aria-describedby="passwordHelpBlock">
+                            <input type="email" id="inputPassword5" class="form-control input-maior"
+                                aria-describedby="passwordHelpBlock" name="email">
                             <small id="passwordHelpBlock" class="form-text text-muted descricao">
                                 Senha
                              </small>
                             <input type="password" id="inputPassword5" class="form-control input-maior"
-                                aria-describedby="passwordHelpBlock">
-                            <button type="button" class="btn btn-warning input-maior">Efetuar login</button>
+                                aria-describedby="passwordHelpBlock" name="senha">
+                            <button type="submit" class="btn btn-warning input-maior">Efetuar login</button>
                             <img src="/images/Logo.svg" alt="logo do site" class="logo" >
                         </div>
                     </form>

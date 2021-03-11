@@ -1,4 +1,4 @@
-const listaBarbeiro = require('../bd-teste/bd')
+const listaBarbeiro = require('../dataBaseSimulation/bd')
 
 const listarProfissionais = () => {
   let lista = []

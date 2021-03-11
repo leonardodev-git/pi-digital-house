@@ -17,7 +17,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-2 nav">
-            <img src="./images/foto-perfil.jpg" alt="perfil">
+            <img src="/images/imagem.png"alt="perfil">
             <div class="nav-info">
             <small>Seja bem vinda.</small>
             <h2>Ana Maria</h2>
@@ -29,30 +29,88 @@
             </div>            
             </div>
             <div class="col-7 principal">
-                <div class="row">
-                    <div class="col teste">
-                        oi
+                <div class="row teste">
+                    <div class="col">
+                    <img src="/images/barberShop.jpg" alt="barberShop" class="barbershop">
+                    </div>
+                    <div class="col">
+                    <img src="/images/logotipo_barbershop.svg" alt="logoBarber" class="barberLogo">
+                    <p>
+                        A Barbershop é uma barbearia com mais de 12 anosde serviços prestados e pode contar com os melhoresprofissionais de São Paulo para te atender.
+                    </p>
+                    <p>
+                        Avenida Sapopemba, 1020 - São Paulo, SPAtendimento das 9h às 21h.
+                    </p>
+                    <button type="button" class="btn btn-warning input-maior">Entrar em contato</button>
+
                     </div>
                 </div>
-                <div class="row"><h2>Profissionais Disponíveis</h2></div>
-                <div class="row">
-                  <% for (let item of barbeiros) { %>
-                    <div class="col-4 teste">
-                        <ul>
-                            <li>
-                                <img src="/images/imgPerfiTeste/<%=item.img%>" alt="Foto perfil do profisional">
-                            </li>
-                            <li>Profissional: <%= item.nome %></li>
-                            <li>Especialista em <%= item.especialidade%></li>
-                            
-                        </ul> 
+                <div class="row disponiveis">
+                  
+                    <h2>Profissionais Disponíveis</h2>
+                
+                </div>
+                <div class="row justify-content-around profissionais">
+                  <% for (let barbeiro of barbeiros) { %>
+                    <div class="col-4 teste info-agenda">
+                       
+                        <img src="<%= barbeiro.img %>"alt="perfil" class="fotoProfissionais">
+                        <p class="h5"><%= barbeiro.nome %></p>
+                        <p><%= barbeiro.especialidade %></p>
+                        <button type="button" class="btn btn-warning input-agenda">Verificar agenda</button>
                         
                     </div>
                   <% } %>
+                                     
                 </div>
                 
             </div>
-            <div class="col-3 agendamento">oi</div>
+            <div class="col-3 agendamento">
+                <p class="h2">Meus Agendamentos</p>
+                <p class="h5">Amanhã</p>
+            <div class="row">
+                <div class="col lista-agendamento">
+                    <p>Corte Simples</p>
+                    <p>08:00-08:30 AM</p>
+                    <div class="detalhe">
+                    <img src="/images/imagem.png" alt="perfil" class="fotoAgendamento">
+                    <button type="button" class="btn btn-warning input-agendamento">Verificar agenda</button>
+                </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col lista-agendamento">
+                    <p>Corte Simples</p>
+                    <p>08:00-08:30 AM</p>
+                    <div class="detalhe">
+                    <img src="/images/imagem.png" alt="perfil" class="fotoAgendamento">
+                    <button type="button" class="btn btn-warning input-agendamento">Verificar agenda</button>
+                </div>
+                </div>
+            </div>
+            <p class="h5">9 de março</p>
+            <div class="row">
+                <div class="col lista-agendamento">
+                    <p>Corte Simples</p>
+                    <p>08:00-08:30 AM</p>
+                    <div class="detalhe">
+                    <img src="/images/imagem.png" alt="perfil" class="fotoAgendamento">
+                    <button type="button" class="btn btn-warning input-agendamento">Verificar agenda</button>
+                </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col lista-agendamento">
+                    <p>Corte Simples</p>
+                    <p>08:00-08:30 AM</p>
+                    <div class="detalhe">
+                    <img src="/images/imagem.png" alt="perfil" class="fotoAgendamento">
+                    <button type="button" class="btn btn-warning input-agendamento">Verificar agenda</button>
+                </div>
+                </div>
+            </div>
+
+            </div>
         </div>
 
     </div>
