@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 //caminho para o arquivo .json
 //const filePath = join(__dirname, "/../bdTeste/", "receitas.json");
 const filePath = path.join('dataBaseSimulation', 'tableOfUsers.json');
-
+const salt = 10;
 
 const getUsers = ()=>{
     const data = fs.existsSync(filePath)?fs.readFileSync(filePath):[]
@@ -26,7 +26,7 @@ const saveUser = (item) => {
         nome: item.nome,
         sobrenome: item.sobrenome,
         email: item.email,
-        senha:bcrypt.hashSync(item.senha, 10),
+        senha:bcrypt.hashSync(item.senha, salt),
     }
     const users = getUsers()
     users.push(dateNewUser)
