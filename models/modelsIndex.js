@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path')
+const bcrypt = require('bcrypt');
 
 //caminho para o arquivo .json
 //const filePath = join(__dirname, "/../bdTeste/", "receitas.json");
@@ -25,7 +26,7 @@ const saveUser = (item) => {
         nome: item.nome,
         sobrenome: item.sobrenome,
         email: item.email,
-        senha:item.senha,
+        senha:bcrypt.hashSync(item.senha, 10),
     }
     const users = getUsers()
     users.push(dateNewUser)

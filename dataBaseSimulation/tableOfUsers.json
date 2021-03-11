@@ -1,14 +1,15 @@
 [
+	{},
 	{
 		"nome": "Bruno",
 		"sobrenome": "Guedes",
 		"email": "bruguedes@gmail.com",
-		"senha": "123"
+		"senha": "$2b$10$XbYkNSJscSVSBfhJw897hO9O96f8oFs1zLApqb7N9FtrvTQbyURiO"
 	},
 	{
-		"nome": "leonardo",
-		"sobrenome": "maga",
+		"nome": "Leonardo",
+		"sobrenome": "Maga",
 		"email": "leo.maga17@gmail.com",
-		"senha": "1234"
+		"senha": "$2b$10$vgPBs6OxP4kTW5iJT/lvmuNov9Mc6Edww3xaaH2v44URJdyu97vlm"
 	}
 ]
