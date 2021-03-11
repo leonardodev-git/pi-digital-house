@@ -5,13 +5,10 @@ const index = (req, res) => {
 }
 
 const login = (req, res)=>{
-  let{email, senha}= req.body
-  let user = modelsLogin.login(email)
-  if(user.email === email && user.senha=== senha){
-    res.redirect('dash')
-  }else{
-    res.send('Usuario e senha invalido')
-  }
+  //let{email, senha}= req.body
+  let user = modelsLogin.login(req.body)
+  user?res.redirect('dash'):res.send('Usuario e senha invalido')
+  
 }
 
 module.exports = { 

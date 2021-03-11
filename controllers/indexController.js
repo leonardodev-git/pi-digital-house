@@ -6,8 +6,6 @@ const index = (req, res)=>{
 
 
 const saveUser = (req, res)=>{
-    // let dados = req.body
-    // console.log(req.body)
     modelsIndex.saveUser(req.body)
     res.redirect('login')
 }

@@ -14,8 +14,8 @@ const tableOfUsers = JSON.parse(fs.readFileSync(filePath,{encoding: 'utf-8'}))
 // }
 
 const login = (reqBody)=>{
-    let userFilter = tableOfUsers.find(user=> user.email === reqBody )
-    return userFilter
+    let userFilter = tableOfUsers.find(user=> user.email === reqBody.email )
+    return userFilter = userFilter.email === reqBody.email && userFilter.senha=== reqBody.senha? true: false
 }
 
 module.exports = {
