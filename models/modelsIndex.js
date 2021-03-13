@@ -1,40 +1,45 @@
-const fs = require('fs');
-const path = require('path')
-const bcrypt = require('bcrypt');
-
+const fs = require("fs");
+const path = require("path");
+const bcrypt = require("bcrypt");
 //caminho para o arquivo .json
-//const filePath = join(__dirname, "/../bdTeste/", "receitas.json");
-const filePath = path.join('dataBaseSimulation', 'tableOfUsers.json');
+const filePath = path.join("dataBaseSimulation", "dataBaseUsers.json");
 const salt = 10;
 
-const getUsers = ()=>{
-    const data = fs.existsSync(filePath)?fs.readFileSync(filePath):[]
+const getDataBaseUsers = () => {
+  const data = fs.existsSync(filePath) ? fs.readFileSync(filePath) : [];
 
-    try{
-        return JSON.parse(data)
-    }catch(error){
-        return[]
-    }
-}
-
-const saveUserJson = (users)=>{
-    fs.writeFileSync(filePath, JSON.stringify(users, null, '\t'))
-}
-
-const saveUser = (item) => {
-    let dateNewUser = {
-        nome: item.nome,
-        sobrenome: item.sobrenome,
-        email: item.email,
-        senha:bcrypt.hashSync(item.senha, salt),
-    }
-    const users = getUsers()
-    users.push(dateNewUser)
-    saveUserJson(users)
-          
+  try {
+    return JSON.parse(data);
+  } catch (error) {
+    return [];
   }
+};
 
-  module.exports= {
-      saveUser
-  }
+const searchForUser = (email) => {
+  const users = getDataBaseUsers();
+  const [user] = users.filter((user) => user.email === email);
+  let userExist = user === undefined ? true : false;
+  return userExist;
+};
 
+const saveUserDataBase = (users) => {
+  fs.writeFileSync(filePath, JSON.stringify(users));
+};
+
+const saveUser = (reqBody) => {
+  const { nome, sobrenome, email, senha } = reqBody;
+  const users = getDataBaseUsers();
+  let newUser = {
+    nome,
+    sobrenome,
+    email,
+    senha: bcrypt.hashSync(senha, salt),
+  };
+  users.push(newUser);
+  saveUserDataBase(users);
+};
+
+module.exports = {
+  saveUser,
+  searchForUser,
+};
