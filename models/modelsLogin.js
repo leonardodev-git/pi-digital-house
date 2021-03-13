@@ -12,7 +12,7 @@ const getDataBaseUsers = (email)=> {
 const userValidation = (reqBody)=>{
     const {email, senha} = reqBody
     const user = getDataBaseUsers(email)
-    return bcrypt.compareSync(senha, user.senha)? true: false
+    return !user || !bcrypt.compareSync(senha, user.senha)? false: true
 }
 
 module.exports = {
