@@ -15,12 +15,12 @@ const getDataBaseUsers = () => {
   }
 };
 
-const searchForUser = (email) => {
-  const users = getDataBaseUsers();
-  const [user] = users.filter((user) => user.email === email);
-  let userExist = user === undefined ? true : false;
-  return userExist;
-};
+// const searchForUser = (email) => {
+//   const users = getDataBaseUsers();
+//   const [user] = users.filter((user) => user.email === email);
+//   let userExist = user === undefined ? true : false;
+//   return userExist;
+// };
 
 const saveUserDataBase = (users) => {
   fs.writeFileSync(filePath, JSON.stringify(users));
@@ -41,5 +41,6 @@ const saveUser = (reqBody) => {
 
 module.exports = {
   saveUser,
-  searchForUser,
+  getDataBaseUsers,
+  // searchForUser,
 };

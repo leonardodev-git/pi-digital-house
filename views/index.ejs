@@ -31,7 +31,13 @@
                     <span>Cadastro</span> 
                     <span>Login</span>
                     </div>
-                    
+                    <ul>
+                    <% if(typeof(errors)!='undefined') { %>
+                        <% errors.forEach((error)=>{ %>
+                          <li><%= error.msg %></li>
+                        <% }) %>
+                      <% } %>
+                    </ul>
                          <form action="/" method="POST">
                             <div class="row">
                                 <div class="col">
