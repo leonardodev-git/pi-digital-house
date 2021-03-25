@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/stylesheets/dash.css">
+    <link href='../lib/main.css' rel='stylesheet' />
+    <script src='../lib/main.js'></script>
+    <link rel="stylesheet" href="../public/stylesheets/callendar.css">
+    <title>Agendamentos</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2 nav">
+            <img src="../public/images/imagem.png"alt="perfil">
+            <div class="nav-info">
+            <small>Seja bem vinda.</small>
+            <h2>Ana Maria</h2>
+            <ul class="list-group">
+                <li class="list-group-item nav-lista"><i class="fas fa-home">Dashboard</i></li>
+                <li class="list-group-item nav-lista"><i class="fas fa-bell">Notificações</i></li>
+                <li class="list-group-item nav-lista"><i class="fas fa-cog">Preferências</i></li>
+              </ul>
+            </div>            
+            </div>
+            <div class="col-10 principal">
+                <div class="row teste">
+                    <div class="col">
+                    <img src="../public/images/barberShop.jpg" alt="barberShop" class="barbershop">
+                    </div>
+                    <div class="col">
+                    <img src="../public/images/logotipo_barbershop.svg" alt="logoBarber" class="barberLogo">
+                    <p>
+                        A Barbershop é uma barbearia com mais de 12 anosde serviços prestados e pode contar com os melhoresprofissionais de São Paulo para te atender.
+                    </p>
+                    <p>
+                        Avenida Sapopemba, 1020 - São Paulo, SPAtendimento das 9h às 21h.
+                    </p>
+                    <button type="button" class="btn btn-warning input-maior">Entrar em contato</button>
+
+                    </div>
+                </div>
+                <div id='wrap' class="callendar row teste">
+
+                    <div id='external-events' class="col-2">
+                      <h4>Draggable Events</h4>
+                
+                      <div id='external-events-list'>
+                        <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                          <div class='fc-event-main'>My Event 1</div>
+                        </div>
+                       </div>
+
+                       <p>
+                        <input type='checkbox' id='drop-remove' />
+                        <label for='drop-remove'>remove after drop</label>
+                      </p>
+                                      
+                    </div>
+
+                
+
+                    <div id='calendar-wrap' class="col-10">
+                      <div id='calendar'></div>
+                    </div>
+                
+                  </div>
+              
+                
+            </div>
+               </div>
+        <script src="https://kit.fontawesome.com/0a254eab35.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+        <script src="../public/stylesheets/main.js"></script>
+</body>
+
+</html>
