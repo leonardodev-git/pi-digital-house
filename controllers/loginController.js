@@ -5,8 +5,13 @@ const index = (req, res) => {
 }
 
 const enter = (req, res)=>{
-  const user = modelsLogin.userValidation(req.body)
-  user?res.redirect('dash'):res.send('Usuario ou senha invalido')
+  const user = modelsLogin.userValidation(req.body);
+  if(user){
+    req.session.userSession = user;
+     return res.redirect('/dash')
+  }
+  return res.send('Usuario ou senha invalido');
+
   
 }
 

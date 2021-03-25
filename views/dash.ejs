@@ -19,8 +19,9 @@
             <div class="col-2 nav">
             <img src="/images/imagem.png"alt="perfil">
             <div class="nav-info">
-            <small>Seja bem vinda.</small>
-            <h2>Ana Maria</h2>
+            <small>Seja bem vinda(o)!</small>
+            <h2><%= userSession.nome %></h2>
+            <p><%= userSession.email %><p/>
             <ul class="list-group">
                 <li class="list-group-item nav-lista"><i class="fas fa-home">Dashboard</i></li>
                 <li class="list-group-item nav-lista"><i class="fas fa-bell">Notificações</i></li>

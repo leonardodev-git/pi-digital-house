@@ -1,9 +1,11 @@
 var express = require('express');
 var router = express.Router();
+let auth = require('../middlewares/auth')
 var dashController = require('../controllers/dashController')
 
 
+
 /* GET users listing. */
-router.get('/', dashController.index);
+router.get('/',auth.auth, dashController.index);
 
 module.exports = router;
