@@ -1,9 +1,24 @@
 body {
     background: #F4F6FB;
-    background-image: url('/images/ilustracao.svg');
+    /*background-image: url('/images/ilustracao.svg');*/
     background-repeat: no-repeat;
     background-size: 40%;
     background-position: bottom 0px left 0px;
+    
+}
+
+.ilustra {
+   display:flex;
+   position: absolute;   
+   width: 37%;
+   height: 537px;
+   
+}
+
+
+h1 {
+    font-weight: bold;
+    font-size: 50px;
 }
 
 .logo {
@@ -40,10 +55,7 @@ body {
     text-align: center;
 }
 
-.ilustracao {
-    position: absolute;
-    width: 50%;
-}
+
 a{
     text-decoration: none;
     color: black;
