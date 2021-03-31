@@ -4,18 +4,23 @@ const index = (req, res) => {
   res.render('login');
 }
 
-const enter = (req, res)=>{
+const authUser = (req, res) => {
   const user = modelsLogin.userValidation(req.body);
-  if(user){
+  if (user.status) {
     req.session.userSession = user;
-     return res.redirect('/dash')
+    return res.redirect('/dash')
   }
-  return res.send('Usuario ou senha invalido');
+  // const msg = {
+  //   usuario: 'Usuário inválido',
+  //   senha: 'Senha inválida'
+  // }
 
-  
+  return res.render('agendamento', { msg: user.msg });
+
+
 }
 
-module.exports = { 
+module.exports = {
   index,
-  enter,
+  authUser,
 };

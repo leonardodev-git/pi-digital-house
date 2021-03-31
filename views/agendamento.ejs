@@ -9,35 +9,23 @@
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../public/stylesheets/dash.css">
+    <link rel="stylesheet" href="/stylesheets/dash.css">
     <link href='../lib/main.css' rel='stylesheet' />
-    <script src='../lib/main.js'></script>
-    <link rel="stylesheet" href="../public/stylesheets/callendar.css">
+     <link rel="stylesheet" href="/stylesheets/callendar.css">
     <title>Agendamentos</title>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-2 nav">
-            <img src="../public/images/imagem.png"alt="perfil">
-            <div class="nav-info">
-            <small>Seja bem vinda.</small>
-            <h2>Ana Maria</h2>
-            <ul class="list-group">
-                <li class="list-group-item nav-lista"><i class="fas fa-home">Dashboard</i></li>
-                <li class="list-group-item nav-lista"><i class="fas fa-bell">Notificações</i></li>
-                <li class="list-group-item nav-lista"><i class="fas fa-cog">Preferências</i></li>
-              </ul>
-            </div>            
-            </div>
+
+  <%- include('./partials/profile') %> 
+    
             <div class="col-10 principal">
                 <div class="row teste">
                     <div class="col">
-                    <img src="../public/images/barberShop.jpg" alt="barberShop" class="barbershop">
+                    <img src="/images/barberShop.jpg" alt="barberShop" class="barbershop">
                     </div>
                     <div class="col">
-                    <img src="../public/images/logotipo_barbershop.svg" alt="logoBarber" class="barberLogo">
+                    <img src="/images/logotipo_barbershop.svg" alt="logoBarber" class="barberLogo">
                     <p>
                         A Barbershop é uma barbearia com mais de 12 anosde serviços prestados e pode contar com os melhoresprofissionais de São Paulo para te atender.
                     </p>
@@ -81,7 +69,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
-        <script src="../public/stylesheets/main.js"></script>
+        <script src="../lib/main.js"></script>
 </body>
 
 </html>
