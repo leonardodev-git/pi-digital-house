@@ -15,7 +15,7 @@ const authUser = (req, res) => {
   //   senha: 'Senha inválida'
   // }
 
-  return res.render('agendamento', { msg: user.msg });
+  return res.render('login', { msg: user.msg });
 
 
 }
