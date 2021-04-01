@@ -14,21 +14,9 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-2 nav">
-            <img src="/images/imagem.png"alt="perfil">
-            <div class="nav-info">
-            <small>Seja bem vinda(o)!</small>
-            <h2><%= userSession.nome %></h2>
-            <p><%= userSession.email %><p/>
-            <ul class="list-group">
-                <li class="list-group-item nav-lista"><i class="fas fa-home">Dashboard</i></li>
-                <li class="list-group-item nav-lista"><i class="fas fa-bell">Notificações</i></li>
-                <li class="list-group-item nav-lista"><i class="fas fa-cog">Preferências</i></li>
-              </ul>
-            </div>            
-            </div>
+    <%- include('./partials/profile') %> 
+
+    
             <div class="col-7 principal">
                 <div class="row teste">
                     <div class="col">
@@ -58,7 +46,7 @@
                         <img src="<%= barbeiro.img %>"alt="perfil" class="fotoProfissionais">
                         <p class="h5"><%= barbeiro.nome %></p>
                         <p><%= barbeiro.especialidade %></p>
-                        <button type="button" class="btn btn-warning input-agenda">Verificar agenda</button>
+                        <button type="button" class="btn btn-warning input-agenda"> <a href="/dash/<%= barbeiro.nome %>">Verificar agenda</a></button>  
                         
                     </div>
                   <% } %>
