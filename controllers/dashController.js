@@ -10,7 +10,14 @@ const agendamento = (req, res) => {
   res.render('agendamento', { barbeiros: lista, userSession: req.session.userSession });
 }
 
+const checkout = (req, res) => {
+  res.render('checkout')
+}
+
+
+
 module.exports = {
   index,
-  agendamento
+  agendamento,
+  checkout,
 };

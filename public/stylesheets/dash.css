@@ -95,6 +95,12 @@ text-align: center;
   min-width: 100%;
 }
 
+.input-agenda > a {
+  text-decoration: none;
+  color: black;
+}
+
+
 .fotoAgendamento {
   width: 50px;
   margin-bottom: 15px;
