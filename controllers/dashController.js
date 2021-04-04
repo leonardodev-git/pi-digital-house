@@ -6,12 +6,17 @@ const index = (req, res) => {
 }
 
 const agendamento = (req, res) => {
+  let teste = req.params
   let lista = listar.listarProfissionais()
-  res.render('agendamento', { barbeiros: lista, userSession: req.session.userSession });
+  res.render('agendamento', { barbeiros: lista, userSession: req.session.userSession, teste:teste.nome});
 }
 
 const checkout = (req, res) => {
-  res.render('checkout')
+  let teste = req.params
+  console.log(teste)
+  
+  let lista = listar.listarProfissionais()
+  res.render('checkout',{barbeiros: lista, userSession: req.session.userSession })
 }
 
 

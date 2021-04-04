@@ -15,8 +15,9 @@ const dateValidation = [
 
 /* GET home page. */
 router.get('/', indexController.index)
-router.post("/", dateValidation, indexController.newUser
-);
+router.post("/", dateValidation, indexController.newUser)
+
+
 
 
 

@@ -8,6 +8,7 @@ var dashController = require('../controllers/dashController')
 /* GET users listing. */
 router.get('/', auth.auth, dashController.index);
 router.get('/:nome', auth.auth, dashController.agendamento);
-router.get('/checkout', dashController.checkout);
+router.get('/:nome/checkout', auth.auth, dashController.checkout);
+//router.get("/checkout", dashController.checkout)
 
 module.exports = router;

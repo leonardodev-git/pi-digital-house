@@ -22,4 +22,5 @@ const newUser = (req, res) => {
 module.exports = {
   index,
   newUser,
+  
 }
