@@ -10,12 +10,8 @@ const authUser = (req, res) => {
     req.session.userSession = user;
     return res.redirect('/dash')
   }
-  // const msg = {
-  //   usuario: 'Usuário inválido',
-  //   senha: 'Senha inválida'
-  // }
-
-  return res.render('agendamento', { msg: user.msg });
+  
+  return res.render('login', { msg: user.msg });
 
 
 }
