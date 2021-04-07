@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [
   {
     "nome": "bruno",
@@ -30,3 +31,6 @@
     "senha": "$2b$10$N/lK2mHOL.v4IK8C0DdoE.Mx15DilQivzUoOf5oTWKh/NDo8LHzya"
   }
 ]
+=======
+[{"nome":"bruno","sobrenome":"guedes","email":"bru@mail.com","senha":"$2b$10$Zt0OTK6VmKCIdKbLaXXI4e0YMR/QyktMW0Dux8N/GrMl1OK2sBMy."},{"nome":"Julia","sobrenome":"Professora","email":"julia@mail.com","senha":"$2b$10$BtX.BTL/gMLwphixXMyu8.xOI0C47b2FsfUDFwjybuG5qj/cx.yAu"},{"nome":"Allan","sobrenome":"Floripa","email":"allan@gmail.com","senha":"$2b$10$vp/en6KBexuHTINdX8cOC.sGNIESL6ROg1hUdJLTQa4MamNCOrDNG"},{"nome":"teste","sobrenome":"teste","email":"teste@teste.com","senha":"$2b$10$cMDHA5cZ5dsCFX1dlxHlY.GD6DTDogZO//tycd0pdHnLgVL61JnuG"}]
+>>>>>>> 78cd14f9efcef297d205cfda8b6a0ca53d3dc1f5
