@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const { check, validationResult, body } = require('express-validator');
 const indexController = require('../controllers/indexController')
-const indexModel = require('../models/modelsIndex')
+const indexModel = require('../modelsOld/modelsIndex')
 
 const dateValidation = [
   check("email").isEmail().withMessage("Email invalido"),

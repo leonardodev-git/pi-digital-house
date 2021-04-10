@@ -1,4 +1,4 @@
-const listar = require('../models/dashModels')
+const listar = require('../modelsOld/Dash')
 
 const index = (req, res) => {
   let lista = listar.listarProfissionais()
