@@ -6,9 +6,9 @@ const indexModel = require('../modelsOld/modelsIndex')
 
 const dateValidation = [
   check("email").isEmail().withMessage("Email invalido"),
-  body("email").custom((email) => {
-    return indexModel.searchForUser(email);
-  }).withMessage("Email já cadastrado!"),
+  // body("email").custom((email) => {
+  //   return indexModel.searchForUser(email);
+  // }).withMessage("Email já cadastrado!"),
   check("senha").isLength({ min: 3 }).withMessage("Senha deve conter mínimo 6 caracteres")
 ]
 
