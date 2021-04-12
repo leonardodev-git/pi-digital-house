@@ -1,4 +1,3 @@
-const modelsIndex = require('../modelsOld/modelsIndex')
 const { validationResult } = require('express-validator');
 const { Clientes } = require('../models');
 const bcrypt = require('bcrypt')
@@ -42,9 +41,9 @@ const newUser = async (req, res) => {
       let errorsBD = [{ msg: `Email: ${verificaUsers.email}, já possui cadastro` }]
       res.render('index', { errors: errorsBD });
     }
-
-    res.render('index', { errors: errors.errors });
   }
+
+  res.render('index', { errors: errors.errors });
 }
 
 
