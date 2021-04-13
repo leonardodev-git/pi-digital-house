@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       sobrenome: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       email: {
         type: Sequelize.STRING
@@ -34,3 +34,4 @@ module.exports = {
     await queryInterface.dropTable('Clientes');
   }
 };
+
