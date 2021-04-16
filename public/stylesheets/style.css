@@ -46,20 +46,27 @@ h1 {
     padding: 60px;
 }
 
-.input-maior {
-    margin: 10px auto;
+.btn-plus {    
+    font-size: 30px;
+    margin: 50px auto;
     max-width: 90%;
+
 }
 
 .descricao {
     text-align: center;
 }
 
-
 a{
     text-decoration: none;
     color: black;
 }
+
+p .email {
+    font-size: 20px;
+    color: #FFC100;
+}
+
 
 
 
