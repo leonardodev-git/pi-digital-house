@@ -1,32 +1,52 @@
 let barbeiro = [
   {
-    nome: 'Leo-fodão',
-    especialidade: 'Cabelo',
-    img: '/images/imagem.png',
+    nome: 'Alexandre Cunha',
+    especialidade: 'Cabelo, Barba e Hidratação',
+    img: '/images/funcionarios/alexandre-cunha.png',
   },
   {
-    nome: 'Bruno-Xato',
-    especialidade: 'Barba',
-    img: '/images/imagem.png',
+    nome: 'Alvaro Dias',
+    especialidade: 'Cabelo, Barba e Hidratação',
+    img: '/images/funcionarios/alvaro-dias.png',
   },
   {
-    nome: 'Lobao-falador',
-    especialidade: 'barba',
-    img: '/images/imagem.png',
+    nome: 'Bernardo Erickles',
+    especialidade: 'Cabelo, Barba e Hidratação',
+    img: '/images/funcionarios/bernado-erickles.png',
   },
   {
-    nome: 'Eduardo-calado',
-    especialidade: 'unha',
-    img: '/images/imagem.png',
+    nome: 'Jennifer Suzan',
+    especialidade: 'Cabelo, Hidratação, Dreads e Beads',
+    img: '/images/funcionarios/jennifer-suzan.png',
   }, {
-    nome: 'Leo-fodão',
-    especialidade: 'Cabelo',
-    img: '/images/imagem.png',
+    nome: 'Paty Simith',
+    especialidade: 'Cabelo, Hidratação, Dreads e Beads',
+    img: '/images/funcionarios/paty-smith.png',
   },
   {
-    nome: 'Bruno-Xato',
-    especialidade: 'Barba',
-    img: '/images/imagem.png',
+    nome: 'Josemir Guster',
+    especialidade: 'Cabelo, Barba e Hidratação',
+    img: '/images/funcionarios/josemir-guster.png',
+  },
+  {
+    nome: 'Kevin Costa',
+    especialidade: 'Cabelo, Barba e Hidratação',
+    img: '/images/funcionarios/kevin-costa.png',
+  },
+  {
+    nome: 'Pamela Rodrigues',
+    especialidade: 'Cabelo, Hidratação, Dreads e Beads',
+    img: '/images/funcionarios/pamela-rodrigues.png',
+  },
+  {
+    nome: 'Miguel Souza',
+    especialidade: 'Cabelo, Hidratação, Dreads e Beads',
+    img: '/images/funcionarios/miguel-souza.png',
+  },
+  {
+    nome: 'Sidney Costella',
+    especialidade: 'Cabelo, Barba e Hidratação',
+    img: '/images/funcionarios/sidney-costella.png',
   },
 
 ]

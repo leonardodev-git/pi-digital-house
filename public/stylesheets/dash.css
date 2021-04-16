@@ -2,13 +2,17 @@ body {
   background: #F4F6FB;
 }
 
-.container-fluid {
-  padding: 20px;
-}
+/*.container-fluid {
+  padding: 5px;
+}*/
+
 
 .nav {
-  background: #1E1E1E;
-  border-radius: 8px;
+  background: black;
+  margin-bottom: -70px;
+  padding: 70px;
+
+  /*border-radius: 8px;*/
   color: #FFFFFF;
 }
 
@@ -16,18 +20,72 @@ body {
   width: 150px;
   height: 150px;
   max-width: 100%;
-  border-radius: 40px;
-  border: 1px solid #707070;
-  margin: 70px auto;
+  border-radius: 90px;
+  border: 5px solid #FFC056;
+  margin: 50px auto;
 }
+
+.cliente {
+  font-size: 50px;
+  color: #FFC056;
+}
+
+.email {
+  font-size: 25px;
+  color: #FFC056;
+}
+
+/*Menu da dashboard */
 
 .nav-lista {
   background: #1E1E1E;
-  color: #FFFFFF;
+  color: #ffffff;
+  font-size: 25px;
+  padding-left: 20px;
+  margin: 20px 0 0 -5px;
+}
+
+.nav-lista:hover {
+  background: #FFC100;
+  color: black;
+  font-size: 25px;
+  padding-left: 20px;
+  margin: 20px 0 0 -5px;
+  cursor: pointer;
+}
+
+
+
+/*.menu {
+  margin: 25px auto;
+  color: #ffffff;
+  padding-left: 20px;
+}
+
+.menu:hover {
+  margin: 25px auto;
+  color: #FFC100;
+  padding-left: 20px;
+  cursor: pointer;
+}*/
+
+/* //////////////////////// */
+
+
+.h2 {
+  margin-top: 40px;
 }
 
 .nav-info {
-  margin: 0px auto 150px auto;
+  margin: 5px auto 500px auto;
+  padding: auto 10px;
+}
+
+.boas-vindas{
+  padding: auto 15px;
+  font-size: 40px;
+  font-weight: bold;
+  
 }
 
 .agendamento {
@@ -40,7 +98,7 @@ body {
   background: #FFFFFF;
   border-radius: 8px;
   padding: 15px;
-  margin: 0px;
+  margin: 50px  auto;
   border: 1px solid black;
  }
 
@@ -82,8 +140,9 @@ text-align: center;
 }
 
 .col > p {
-  text-align: start;
-  font-size: 0.8em;
+  margin-top: 10px;
+  text-align: left;
+  font-size: 1em;
 }
 
 .fotoProfissionais {
@@ -107,7 +166,7 @@ text-align: center;
 }
 
 .lista-agendamento {
-  background-color: #FFC056;
+  background-color: #f7c677;
   margin: 20px;
   border-radius: 10px;
   opacity: 0.8;
@@ -115,13 +174,95 @@ text-align: center;
 }
 
 .input-agendamento {
+  background-color: rgb(0, 0, 0);
+  border-color: #FFC100; 
+  color: #FFC100;
   border-radius: 10px;
   margin-bottom: 15px;
 }
+
+.service {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.input-agendamento:hover {
+  background-color: #FFC100;
+  border-color: black;
+  color: #000000; border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+
 
 .detalhe {
   display: flex;
   justify-content: space-between;
   margin: 0px 5px; 
+
+}
+
+.prof {
+ margin-top: -30px;
+ font-size: 30px;
+
+}
+
+/*  FOOTER */ 
+footer {
+  background-color: #FFC100;  
+  width: 100%;
+  height: 80px;  
+  
+}
+
+footer p {
+  color: black;
+  text-align: center;
+  padding-top: 25px;
+  font-size: 20px;
+  
+}
+
+/*WHATSAPP*/ 
+
+.whatsapp-link {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 50px;
+  box-shadow: 1px 1px 2px #888;
+  z-index: 2;
+}
+
+.fa-whatsapp {
+  margin-top: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+/*RESPONSVIIDADE8*/
+
+@media(min-width:501px) {
+
+
+}
+
+@media(min-width:769px) {
+
+
 
 }

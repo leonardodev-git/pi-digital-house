@@ -1,16 +1,20 @@
-<div class="container-fluid">
+
+  <div class="container-fluid">
   <div class="row">
       <div class="col-2 nav">
-      <img src="/images/imagem.png"alt="perfil">
+      <img src="/images/cliente-2.png"alt="perfil">
       <div class="nav-info">
-      <small>Seja bem vinda(o)!</small>
-      <h2><%= userSession.nome %></h2>
-      <p><%= userSession.email %><p/>
+      <small class="boas-vindas">Bem vindo(a)!</small>
+      <h2 class="cliente"><%= userSession.nome %></h2>
+      <p class="email"><%= userSession.email %></p>
       <ul class="list-group">
-          <li class="list-group-item nav-lista"><i class="fas fa-home">Dashboard</i></li>
-          <li class="list-group-item nav-lista"><i class="fas fa-bell">Notificações</i></li>
-          <li class="list-group-item nav-lista"><i class="fas fa-cog">Preferências</i></li>
-
+          <li class="list-group-item nav-lista"><i class="fas fa-home menu">Dashboard</i></li>
+          <li class="list-group-item nav-lista"><i class="fas fa-bell menu">Notificações</i></li>
+          <li class="list-group-item nav-lista"><i class="fas fa-cog menu">Preferências</i></li>
         </ul>
       </div>            
       </div>
+  
+
+
+
