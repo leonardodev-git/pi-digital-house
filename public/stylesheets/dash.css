@@ -48,12 +48,15 @@ body {
 .nav-lista:hover {
   background: #FFC100;
   color: black;
-  font-size: 25px;
-  padding-left: 20px;
+  font-size: 25px;  
   margin: 20px 0 0 -5px;
   cursor: pointer;
 }
 
+.nav-lista > i {
+  padding-right: 20px;
+
+}
 
 
 /*.menu {
