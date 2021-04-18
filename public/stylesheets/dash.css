@@ -10,7 +10,7 @@ body {
 .nav {
   background: black;
   margin-bottom: -70px;
-  padding: 70px;
+  
 
   /*border-radius: 8px;*/
   color: #FFFFFF;
@@ -249,7 +249,11 @@ footer p {
   margin-top: 16px;
 }
 
-
+.copy {
+  color: white;
+  margin: auto 35px;
+  text-align: left;
+}
 
 
 
