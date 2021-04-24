@@ -6,20 +6,20 @@ var logger = require('morgan');
 var session = require('express-session')
 
 
-var indexRouter = require('./routes/index');
-var dashRouter = require('./routes/dash');
-var loginRouter = require('./routes/login');
+var indexRouter = require('./src/routes/index');
+var dashRouter = require('./src/routes/dash');
+var loginRouter = require('./src/routes/login');
 
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join("./src", 'views'));
 app.set('view engine', 'ejs');
 
 app.use(session({
-  secret:'projeto Intregrador Devsix',
-  resave:true,
-  saveUninitialized:true
+  secret: 'projeto Intregrador Devsix',
+  resave: true,
+  saveUninitialized: true
 }))
 app.use(logger('dev'));
 app.use(express.json());

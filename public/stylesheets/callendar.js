@@ -55,11 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
         start: '2021-03-16T16:00:00'
       },
       {
-        title: 'Conference',
-        start: '2021-03-11',
-        end: '2021-03-13'
-      },
-      {
         title: 'Meeting',
         start: '2021-03-12T10:30:00',
         end: '2021-03-12T12:30:00'

@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "db_pi02",
+    "database": "pi_bd",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
