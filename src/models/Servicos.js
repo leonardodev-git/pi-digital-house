@@ -5,6 +5,8 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class Servicos extends Model {
 
+    // lugar de fazer a lógica para pegar os eventos no banco.
+
     static associate(models) {
       Servicos.hasMany(models.Agendamentos);
     }

@@ -9,6 +9,7 @@ var session = require('express-session')
 var indexRouter = require('./src/routes/index');
 var dashRouter = require('./src/routes/dash');
 var loginRouter = require('./src/routes/login');
+var serverRouter = require('./src/routes/servico');
 
 var app = express();
 
@@ -30,6 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/dash', dashRouter);
 app.use('/login', loginRouter);
+app.use('/servico', serverRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

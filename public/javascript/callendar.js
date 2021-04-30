@@ -3,6 +3,12 @@ document.addEventListener('DOMContentLoaded', function () {
   var Draggable = FullCalendar.Draggable;
   var containerEl = document.getElementById('external-events');
   var checkbox = document.getElementById('drop-remove');
+  
+  // let eventoCompleto = {}
+
+  // events.addEventListener('drop', cria um objeto joga no eventoCompleto)
+
+  // module.exports = {eventoCompleto}
 
   // initialize the external events
   // -----------------------------------------------------------------
