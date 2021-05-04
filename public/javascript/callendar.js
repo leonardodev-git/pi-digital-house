@@ -1,9 +1,19 @@
+function agendar(agendamento) {
+  const url = `http://localhost:5000/servico/agendar`;
+
+  fetch(url, {
+    method: 'POST',
+    body: JSON.stringify(agendamento)
+  })
+}
+
+
 document.addEventListener('DOMContentLoaded', function () {
   var calendarEl = document.getElementById('calendar');
   var Draggable = FullCalendar.Draggable;
   var containerEl = document.getElementById('external-events');
   var checkbox = document.getElementById('drop-remove');
-  
+
   // let eventoCompleto = {}
 
   // events.addEventListener('drop', cria um objeto joga no eventoCompleto)
@@ -33,6 +43,13 @@ document.addEventListener('DOMContentLoaded', function () {
     editable: true,
     droppable: true,
     drop: function (info) {
+      const servico = info.draggedEl.innerText
+      const data = info.dateStr
+      const agendamento = {
+        servico, data
+      }
+      agendar(agendamento)
+      console.log(agendamento)
       // is the "remove after drop" checkbox checked?
       if (checkbox.checked) {
         // if so, remove the element from the "Draggable Events" list
@@ -85,6 +102,10 @@ document.addEventListener('DOMContentLoaded', function () {
     ]
   });
   calendar.render();
+  console.log(calendar.currentData.getCurrentData())
 
+  calendar.on('dateClick', function (info) {
+    console.log('clicked on ' + info.dateStr);
+  });
 
 });

@@ -4,6 +4,10 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session')
+const cors = require('cors')
+
+
+
 
 
 var indexRouter = require('./src/routes/index');
@@ -17,6 +21,7 @@ var app = express();
 app.set('views', path.join("./src", 'views'));
 app.set('view engine', 'ejs');
 
+app.use(cors());
 app.use(session({
   secret: 'projeto Intregrador Devsix',
   resave: true,

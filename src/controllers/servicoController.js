@@ -1,6 +1,7 @@
 const { Servico } = require('../models');
 
 const teste = (req, res) => {
+  res.json(req.body)
   res.send('testando a rota')
 }
 
