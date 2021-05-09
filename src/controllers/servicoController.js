@@ -1,8 +1,11 @@
+const { default: axios } = require('axios');
 const { Servico } = require('../models');
 
 const teste = (req, res) => {
-  res.json(req.body)
-  res.send('testando a rota')
+  const agendamento = [];
+  agendamento.push(req.body)
+  console.log(agendamento)
+
 }
 
 const events = async (req, res) => {

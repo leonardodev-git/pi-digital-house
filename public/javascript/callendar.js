@@ -1,9 +1,12 @@
-function agendar(agendamento) {
+async function agendar(agendamento) {
   const url = `http://localhost:5000/servico/agendar`;
-
-  fetch(url, {
+  console.log(agendamento)
+  await fetch(url, {
     method: 'POST',
-    body: JSON.stringify(agendamento)
+    body: JSON.stringify(agendamento),
+    headers: {
+      'Content-Type': 'application/json'
+    }
   })
 }
 
@@ -13,15 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
   var Draggable = FullCalendar.Draggable;
   var containerEl = document.getElementById('external-events');
   var checkbox = document.getElementById('drop-remove');
-
-  // let eventoCompleto = {}
-
-  // events.addEventListener('drop', cria um objeto joga no eventoCompleto)
-
-  // module.exports = {eventoCompleto}
-
-  // initialize the external events
-  // -----------------------------------------------------------------
 
   new Draggable(containerEl, {
     itemSelector: '.fc-event',
@@ -42,14 +36,13 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     editable: true,
     droppable: true,
-    drop: function (info) {
+    drop: async function (info) {
       const servico = info.draggedEl.innerText
       const data = info.dateStr
       const agendamento = {
         servico, data
       }
-      agendar(agendamento)
-      console.log(agendamento)
+      await agendar(agendamento)
       // is the "remove after drop" checkbox checked?
       if (checkbox.checked) {
         // if so, remove the element from the "Draggable Events" list
@@ -102,10 +95,10 @@ document.addEventListener('DOMContentLoaded', function () {
     ]
   });
   calendar.render();
-  console.log(calendar.currentData.getCurrentData())
+  // console.log(calendar.currentData.getCurrentData())
 
   calendar.on('dateClick', function (info) {
-    console.log('clicked on ' + info.dateStr);
+    // console.log('clicked on ' + info.dateStr);
   });
 
 });
