@@ -1,7 +1,7 @@
 // const modelsLogin = require('../modelsOld/Login')
 const { Clientes } = require('../models');
 const bcrypt = require('bcrypt');
-const { userValidation } = require('../../modelsOld/Login');
+// const { userValidation } = require('../../modelsOld/Login');
 
 const index = (req, res) => {
   res.render('login');
@@ -30,7 +30,7 @@ const authUser = async (req, res) => {
   })
   const user = loginUser(usuarioValidation, req);
   if (user.status) {
-    delete userValidation.senha
+    delete usuarioValidation.senha
     req.session.userSession = usuarioValidation;
     return res.redirect('/dash')
   }
