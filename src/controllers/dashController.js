@@ -59,7 +59,7 @@ const agendamento = async (req, res) => {
 
   res.render('agendamento', { barbeiro: informacoes, servicos: informacoes.servicos, userSession: req.session.userSession });
 }
-ran
+
 
 const checkout = (req, res) => {
   let teste = req.params
