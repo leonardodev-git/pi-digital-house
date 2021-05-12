@@ -41,8 +41,6 @@ let informacaoDoProfissional = (dados) => {
   }
 
 }
-
-
 // ---------------------------------------------------------
 
 
@@ -59,9 +57,9 @@ const agendamento = async (req, res) => {
   let dadosProfissional = await getProfissional(req.params.nome)
   let informacoes = informacaoDoProfissional(dadosProfissional)
 
-
   res.render('agendamento', { barbeiro: informacoes, servicos: informacoes.servicos, userSession: req.session.userSession });
 }
+ran
 
 const checkout = (req, res) => {
   let teste = req.params
