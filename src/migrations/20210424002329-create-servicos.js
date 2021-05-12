@@ -14,7 +14,7 @@ module.exports = {
       preco: {
         type: Sequelize.FLOAT
       },
-      Profissional_ID: {
+      profissional_ID: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {

@@ -1,4 +1,4 @@
-// const modelsLogin = require('../modelsOld/Login')
+//const modelsLogin = require('../modelsOld/Login')
 const { Clientes } = require('../models');
 const bcrypt = require('bcrypt');
 // const { userValidation } = require('../../modelsOld/Login');
