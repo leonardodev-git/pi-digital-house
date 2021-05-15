@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
 
     static associate(models) {
       Profissionais.hasMany(models.Agendamentos);
-      Profissionais.hasMany(models.Servicos);
+      Profissionais.hasMany(models.Servicos, { foreignKey: "profissional_ID" });
 
     }
   };

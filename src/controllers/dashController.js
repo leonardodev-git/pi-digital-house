@@ -1,33 +1,27 @@
 //const listar = require('../../modelsOld/Dash');
-const { Profissionais } = require('../models');
-
-listaProTratada = (profissionais) => {
-  newList = []
-  for (profissional of profissionais) {
-    newList.push({
-      nome: profissional.dataValues.nome + " " + profissional.dataValues.sobrenome,
-      avatar: profissional.dataValues.avatar
-    })
-
-  }
-  return newList
-}
-
+//const { Profissionais, Servicos } = require('../models');
+const professionalQuery = require('../db/professionalQuerys')
+const treatData = require('../db/treatData')
 
 
 const index = async (req, res) => {
-  const lista = await Profissionais.findAll()
-  profissionais = listaProTratada(lista)
 
-  //let lista = listar.listarProfissionais()
+  listAll = await professionalQuery.listAll()
+
+  profissionais = treatData.listAllProfessional(listAll)
+
   res.render('dash', { barbeiros: profissionais, userSession: req.session.userSession });
 }
 
-const agendamento = (req, res) => {
-  let teste = req.params
-  let lista = listar.listarProfissionais()
-  res.render('agendamento', { barbeiros: lista, userSession: req.session.userSession, teste: teste.nome });
+const agendamento = async (req, res) => {
+
+  let dadosProfissional = await professionalQuery.getProfissional(req.params.nome)
+
+  let informacoes = treatData.informationAndServices(dadosProfissional)
+
+  res.render('agendamento', { barbeiro: informacoes, servicos: informacoes.servicos, userSession: req.session.userSession });
 }
+
 
 const checkout = (req, res) => {
   let teste = req.params

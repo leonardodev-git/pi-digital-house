@@ -25,9 +25,12 @@
       <div class="row teste">
         <div class="col-3">
           <img src="/images/placeholder.png" alt="barberShop" class="profilePhoto">
-          <h3>Mariana Silva</h3>
+          <h3>
+            <%=barbeiro.nome %>
+          </h3>
           <small>Especialista em corte</small> <br> <br>
-          <button type="button" class="btn btn-warning input-maior"> <a href="/dash/<%=teste %>/checkout">Agendar</a>
+          <button type="button" class="btn btn-warning input-maior"> <a
+              href="/dash/<%=barbeiro.id %>/checkout">Agendar</a>
           </button>
 
         </div>
@@ -74,21 +77,23 @@
           <p>
             <strong>Marque seu serviço</strong>
           </p>
-
-          <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
-            <div class='fc-event-main'>Barba</div>
-          </div>
-          <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+          <%for (let servico of servicos) { %>
+            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+              <div class='fc-event-main'>
+                <%= servico %>
+              </div>
+            </div>
+            <!-- <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
             <div class='fc-event-main'>Corte de cabelo</div>
           </div>
           <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
             <div class='fc-event-main'>Hidratação</div>
-          </div>
-
-          <p>
-            <input type='checkbox' id='drop-remove' />
-            <label for='drop-remove'>remove after drop</label>
-          </p>
+          </div> -->
+            <% } %>
+              <p>
+                <input type='checkbox' id='drop-remove' />
+                <label for='drop-remove'>remove after drop</label>
+              </p>
         </div>
 
       </div>
