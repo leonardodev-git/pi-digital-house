@@ -6,22 +6,24 @@ var logger = require('morgan');
 var session = require('express-session')
 const cors = require('cors')
 
+let corsOptions = {
+  origin: "http://localhost:8081"
+}
 
 
 
 
-var indexRouter = require('./src/routes/index');
+
+
+var usersRouter = require('./src/routes/users');
 var dashRouter = require('./src/routes/dash');
 var loginRouter = require('./src/routes/login');
 var serverRouter = require('./src/routes/servico');
 
 var app = express();
 
-// view engine setup
-app.set('views', path.join("./src", 'views'));
-app.set('view engine', 'ejs');
 
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(session({
   secret: 'projeto Intregrador Devsix',
   resave: true,
@@ -33,7 +35,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+
+app.use('/users', usersRouter);
 app.use('/dash', dashRouter);
 app.use('/login', loginRouter);
 app.use('/servico', serverRouter);
@@ -51,7 +54,7 @@ app.use(function (err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.json('error');
 });
 
 module.exports = app;

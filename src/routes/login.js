@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
+const validingInputs = require('../middlewares/validingInputs')
+const verifySignin = require('../middlewares/verifySignup')
 var loginController = require('../controllers/loginController')
 
-router.get('/', loginController.index);
-router.post('/', loginController.authUser);
+router.post('/', validingInputs.inputsValidationSignin(), loginController.authUser);
 
 module.exports = router;
