@@ -2,6 +2,7 @@ const { validationResult } = require('express-validator');
 const { Clientes } = require('../models');
 const bcrypt = require('bcrypt')
 
+
 // the fuctions newUser create new use in data base.
 const create = async (req, res) => {
     let errors = validationResult(req);

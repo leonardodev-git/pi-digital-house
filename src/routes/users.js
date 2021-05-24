@@ -6,6 +6,7 @@ const verifySignup = require('../middlewares/verifySignup')
 
 const usersController = require('../controllers/usersController')
 
+
 router.post("/", [verifySignup.checkUserExist, validingInputs.dateValidation()], usersController.create)
 
 

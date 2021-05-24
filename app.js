@@ -19,6 +19,7 @@ var usersRouter = require('./src/routes/users');
 var dashRouter = require('./src/routes/dash');
 var loginRouter = require('./src/routes/login');
 var serverRouter = require('./src/routes/servico');
+var resHeader = require('./src/middlewares/res.hender')
 
 var app = express();
 
@@ -34,6 +35,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(resHeader)
 
 
 app.use('/users', usersRouter);
