@@ -10,19 +10,14 @@ let corsOptions = {
   origin: "http://localhost:8081"
 }
 
-
-
-
-
-
 var usersRouter = require('./src/routes/users');
+var profissionalsRouter = require('./src/routes/professionals')
 var dashRouter = require('./src/routes/dash');
 var loginRouter = require('./src/routes/login');
 var serverRouter = require('./src/routes/servico');
 var resHeader = require('./src/middlewares/res.hender')
 
 var app = express();
-
 
 app.use(cors(corsOptions));
 app.use(session({
@@ -39,8 +34,9 @@ app.use(resHeader)
 
 
 app.use('/users', usersRouter);
-app.use('/dash', dashRouter);
 app.use('/login', loginRouter);
+app.use('/profissionals', profissionalsRouter);
+app.use('/dash', dashRouter);
 app.use('/servico', serverRouter);
 
 // catch 404 and forward to error handler

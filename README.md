@@ -17,5 +17,10 @@ Login:
 	"senha": "xxxxxxx"
 }
 
+Listar profissionais:
+	GET http://localhost:5000/profissionals/all/
+
+Detalhar profissional
+	GET http://localhost:5000/profissionals/:id
 
 
