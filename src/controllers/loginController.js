@@ -1,4 +1,3 @@
-// const modelsLogin = require('../modelsOld/Login')
 const { Clientes } = require('../models');
 const bcrypt = require('bcrypt');
 const { userValidation } = require('../../modelsOld/Login');
@@ -8,8 +7,8 @@ const index = (req, res) => {
 }
 
 const loginUser = (dadosForm, req) => {
-  const { email, senha } = req.body
-  if (dadosForm === null) {
+  const { senha } = req.body
+  if (!dadosForm) {
     return { msg: "Email errado", status: false }
   }
 
@@ -22,7 +21,6 @@ const loginUser = (dadosForm, req) => {
 }
 
 const authUser = async (req, res) => {
-  // const user = modelsLogin.userValidation(req.body);
   const usuarioValidation = await Clientes.findOne({
     where: {
       email: req.body.email

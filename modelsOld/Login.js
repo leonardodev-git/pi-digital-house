@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path')
-const bcrypt = require('bcrypt');
 //caminho para o arquivo .json
 const filePath = path.join('dataBaseSimulation', 'dataBaseUsers.json');
 
