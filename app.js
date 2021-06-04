@@ -4,11 +4,16 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session')
+const cors = require('cors')
+
+
+
 
 
 var indexRouter = require('./src/routes/index');
 var dashRouter = require('./src/routes/dash');
 var loginRouter = require('./src/routes/login');
+var serverRouter = require('./src/routes/servico');
 
 var app = express();
 
@@ -16,6 +21,7 @@ var app = express();
 app.set('views', path.join("./src", 'views'));
 app.set('view engine', 'ejs');
 
+app.use(cors());
 app.use(session({
   secret: 'projeto Intregrador Devsix',
   resave: true,
@@ -30,6 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/dash', dashRouter);
 app.use('/login', loginRouter);
+app.use('/servico', serverRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

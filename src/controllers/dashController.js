@@ -1,15 +1,27 @@
-const listar = require('../../modelsOld/Dash')
+//const listar = require('../../modelsOld/Dash');
+//const { Profissionais, Servicos } = require('../models');
+const professionalQuery = require('../db/professionalQuerys')
+const treatData = require('../db/treatData')
 
-const index = (req, res) => {
-  let lista = listar.listarProfissionais()
-  res.render('dash', { barbeiros: lista, userSession: req.session.userSession });
+
+const index = async (req, res) => {
+
+  listAll = await professionalQuery.listAll()
+
+  profissionais = treatData.listAllProfessional(listAll)
+
+  res.render('dash', { barbeiros: profissionais, userSession: req.session.userSession });
 }
 
-const agendamento = (req, res) => {
-  let teste = req.params
-  let lista = listar.listarProfissionais()
-  res.render('agendamento', { barbeiros: lista, userSession: req.session.userSession, teste: teste.nome });
+const agendamento = async (req, res) => {
+
+  let dadosProfissional = await professionalQuery.getProfissional(req.params.nome)
+
+  let informacoes = treatData.informationAndServices(dadosProfissional)
+
+  res.render('agendamento', { barbeiro: informacoes, servicos: informacoes.servicos, userSession: req.session.userSession });
 }
+
 
 const checkout = (req, res) => {
   let teste = req.params
@@ -30,4 +42,4 @@ module.exports = {
   agendamento,
   checkout,
   confirm,
-};
+}
