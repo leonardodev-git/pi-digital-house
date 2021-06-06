@@ -4,7 +4,10 @@ const servicoController = require('../controllers/servicoController');
 
 
 //localhost:5000/servico
-router.post('/agendar', servicoController.teste);
+router.get('/', servicoController.teste);
+router.post('/', servicoController.teste);
+router.put('/', servicoController.teste);
+router.delete('/', servicoController.teste);
 
 
 module.exports = router;

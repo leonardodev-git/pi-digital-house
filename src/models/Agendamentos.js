@@ -13,7 +13,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Agendamentos.init({
-    Data_Horario: DataTypes.DATE,
+    Start: DataTypes.DATE,
+    End: DataTypes.DATE
   }, {
     sequelize,
     modelName: 'Agendamentos',
