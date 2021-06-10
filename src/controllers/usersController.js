@@ -23,20 +23,29 @@ const create = async (req, res) => {
 }
 
 const deletar = async (req, res) => {
-    await User.destroy({
+    await Clientes.destroy({
         where: {
-          firstName: "Jane"
+          id:  req.userId
         }
       });
+      res.send('O usuário foi deletado')
 }
 
 
 const update = async (req, res) => {
-    await User.update({ lastName: "Doe" }, {
+    console.log(req.userId)
+    await Clientes.update({ 
+        nome: req.body.nome,
+        sobrenome: req.body.sobrenome,
+        email: req.body.email
+        
+     },
+     {
         where: {
-          lastName: null
-        }
+            id:  req.userId
+          }
       });
+      res.send('O usuário foi alterado')
 }
 
 module.exports = {
