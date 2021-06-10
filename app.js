@@ -7,7 +7,7 @@ var session = require('express-session')
 const cors = require('cors')
 
 let corsOptions = {
-  origin: "http://localhost:8081"
+  origin: "http://localhost:3000"
 }
 
 var usersRouter = require('./src/routes/users');

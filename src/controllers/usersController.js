@@ -22,6 +22,25 @@ const create = async (req, res) => {
     res.status(400).json({ messenger: errors.errors })
 }
 
+const deletar = async (req, res) => {
+    await User.destroy({
+        where: {
+          firstName: "Jane"
+        }
+      });
+}
+
+
+const update = async (req, res) => {
+    await User.update({ lastName: "Doe" }, {
+        where: {
+          lastName: null
+        }
+      });
+}
+
 module.exports = {
     create,
+    deletar,
+    update
 }
