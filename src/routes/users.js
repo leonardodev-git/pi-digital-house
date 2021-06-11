@@ -9,7 +9,7 @@ const jwtAuth = require('../middlewares/jwtAuth');
 
 
 router.post("/", [verifySignup.checkUserExist, validingInputs.dateValidation()], usersController.create)
-router.delete("/delete", jwtAuth.verifyToken, usersController.deletar)
-router.put("/update",  jwtAuth.verifyToken, usersController.update)
+router.delete("/", jwtAuth.verifyToken, usersController.deletar)
+router.put("/", jwtAuth.verifyToken, usersController.update)
 
 module.exports = router;

@@ -1,9 +1,9 @@
 const { validationResult } = require('express-validator');
 const { Clientes } = require('../models');
 const bcrypt = require('bcrypt')
+const userQuery = require('../db/userQuerys')
 
 
-// the fuctions newUser create new use in data base.
 const create = async (req, res) => {
     let errors = validationResult(req);
 
@@ -23,29 +23,23 @@ const create = async (req, res) => {
 }
 
 const deletar = async (req, res) => {
-    await Clientes.destroy({
-        where: {
-          id:  req.userId
-        }
-      });
-      res.send('O usuário foi deletado')
+    try {
+        await userQuery.deletar(req.userId)
+        res.status(204).json({ message: "Users successfully update!" });
+    } catch (error) {
+        res.status(500).json({ message: error });
+    }
+
 }
-
-
 const update = async (req, res) => {
-    console.log(req.userId)
-    await Clientes.update({ 
-        nome: req.body.nome,
-        sobrenome: req.body.sobrenome,
-        email: req.body.email
-        
-     },
-     {
-        where: {
-            id:  req.userId
-          }
-      });
-      res.send('O usuário foi alterado')
+
+    try {
+        await userQuery.update(req.body, req.userId)
+        res.status(201).json({ message: "Users successfully update!" });
+    } catch (error) {
+        res.status(500).json({ message: error });
+    }
+
 }
 
 module.exports = {
@@ -53,3 +47,4 @@ module.exports = {
     deletar,
     update
 }
+
