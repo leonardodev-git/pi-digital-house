@@ -35,7 +35,7 @@ const update = async (req, res) => {
 
     try {
         await userQuery.update(req.body, req.userId)
-        res.status(201).json({ message: "Users successfully update!" });
+        res.status(200).json({ message: "Users successfully update!" });
     } catch (error) {
         res.status(500).json({ message: error });
     }
