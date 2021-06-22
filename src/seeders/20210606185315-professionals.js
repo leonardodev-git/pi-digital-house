@@ -51,6 +51,20 @@ module.exports = {
       avatar: 'https://bit.ly/3xx8Olc',
       createdAt: '2021-06-06 18:30:22',
       updatedAt: '2021-06-06 18:30:22'
+    },
+    {
+      nome: 'Julia',
+      sobrenome: 'Ramos',
+      avatar: 'https://bit.ly/3cZDHqD',
+      createdAt: '2021-06-06 18:30:22',
+      updatedAt: '2021-06-06 18:30:22'
+    },
+    {
+      nome: 'Pedro',
+      sobrenome: 'Braga',
+      avatar: 'https://bit.ly/3gZlrP4',
+      createdAt: '2021-06-06 18:30:22',
+      updatedAt: '2021-06-06 18:30:22'
     }
 
     ], {});
