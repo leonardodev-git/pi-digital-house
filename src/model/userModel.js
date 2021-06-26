@@ -1,4 +1,4 @@
-const { Clientes } = require('../models');
+const { Clientes } = require('../bd_models');
 
 
 const searchUsers = async (email) => await Clientes.findOne({

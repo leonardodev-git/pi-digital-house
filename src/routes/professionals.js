@@ -1,7 +1,7 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 // let auth = require('../middlewares/validingInputs')
-var profissionalsController = require('../controllers/professionalsController')
+const profissionalsController = require('../controllers/professionalsController')
 const jwtAuth = require('../middlewares/jwtAuth')
 
 router.get('/all', jwtAuth.verifyToken, profissionalsController.all)

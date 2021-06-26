@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
       Profissionais.hasMany(models.Servicos, { foreignKey: "profissional_ID" });
 
     }
-  };
+  }
   Profissionais.init({
     nome: DataTypes.STRING,
     sobrenome: DataTypes.STRING,

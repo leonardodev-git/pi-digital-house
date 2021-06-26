@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const { validationResult } = require('express-validator');
-const search = require('../db/userQuerys')
+const search = require('../model/userModel')
 const config = require('../config/jwtConfig')
 const jwt = require('jsonwebtoken')
 

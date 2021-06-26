@@ -1,4 +1,4 @@
-const search = require('../db/userQuerys')
+const search = require('../model/userModel')
 
 const checkUserExist = async (req, res, next) => {
 
@@ -16,10 +16,7 @@ const checkUserCorrect = async (req, res, next) => {
     await search.searchUsers(req.body.email).then(user => {
         console.log(user)
 
-        if (!user) {
-            res.status(400).json({ message: "User not registered!" })
-            return;
-        }
+        if (!user) res.status(400).json({ message: "User not registered!" })
 
     });
     next()

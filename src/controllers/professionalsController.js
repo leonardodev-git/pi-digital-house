@@ -1,5 +1,5 @@
-let querys = require('../db/professionalQuerys')
-let treatData = require('../db/treatData')
+let querys = require('../model/professionalModel')
+let treatData = require('../model/treatData')
 
 let all = async (req, res) => {
     let allProfissionals = await querys.listAll()

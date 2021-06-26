@@ -1,9 +1,9 @@
-var express = require('express');
-var router = express.Router();
-const validingInputs = require('../middlewares/validingInputs')
-var loginController = require('../controllers/loginController')
+const express = require('express');
+const router = express.Router();
+const validatingInputs = require('../middlewares/validatingInputs')
+const loginController = require('../controllers/loginController')
 
-router.post('/', validingInputs.inputsValidationSignin(), loginController.authUser);
-router.get('/', validingInputs.inputsValidationSignin(), loginController.authUser);
+router.post('/', validatingInputs.inputsValidationSignin(), loginController.authUser);
+router.get('/', validatingInputs.inputsValidationSignin(), loginController.authUser);
 
 module.exports = router;
