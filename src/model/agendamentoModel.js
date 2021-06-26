@@ -1,17 +1,12 @@
-const Agendamentos = require('../bd_models');
+const {Agendamentos} = require('../bd_models');
 
-const agendamento = async (paramId) => {
-    return await Agendamentos.findOne({
-        where: {
-            id: paramId
-        }
-    })
+let procurarAgendamento = async (paramId) => {
+    return await Agendamentos.findByPk(paramId)
 }
 
-const create = async ({info}) => {
-    await Agendamentos.create({info})
+const novoAgendamento = async (params) => {
+    await Agendamentos.create(params);
 }
-
 const destroy = async (paramId) => {
     await Agendamentos.destroy({
         where: {
@@ -21,13 +16,15 @@ const destroy = async (paramId) => {
 }
 
 const update = async (id, start, end) => {
-    const agendamento = agendamento(id);
+    const agendamento = await procurarAgendamento(id);
+    console.log(id)
     agendamento.Start = start;
     agendamento.End = end;
+    await agendamento.save();
 }
 
 module.exports = {
-    create,
+    novoAgendamento,
     destroy,
     update
 }

@@ -1,8 +1,8 @@
 const model = require("../model/agendamentoModel");
 
 const create = async (req, res) => {
-    const { Start, End, Valor_Total, Profissional_ID, Cliente_ID, Servico_ID } = (req.body);
-    await model.create({ Start, End, Valor_Total, Profissional_ID, Cliente_ID, Servico_ID });
+    // const { Start, End, Valor_Total, Profissional_ID, Cliente_ID, Servico_ID } = (req.body);
+    await model.novoAgendamento( req.body );
     res.status(200).json({ message: "Agendamento successfully created!" });
 }
 
