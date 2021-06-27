@@ -1,8 +1,7 @@
 const { Agendamentos } = require('../bd_models');
 
-const novoAgendamento = async (params) => {
-    await Agendamentos.create(params);
-}
+const novoAgendamento = async (params) => await Agendamentos.create(params);
+
 const destroy = async (paramId) => {
     await Agendamentos.destroy({
         where: {

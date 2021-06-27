@@ -1,23 +1,24 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var session = require('express-session')
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const session = require('express-session');
 const cors = require('cors')
 
 let corsOptions = {
   origin: "http://localhost:3000"
 }
 
-var usersRouter = require('./src/routes/users');
-var profissionalsRouter = require('./src/routes/professionals')
-var dashRouter = require('./src/routes/dash');
-var loginRouter = require('./src/routes/login');
-var serverRouter = require('./src/routes/servico');
-var resHeader = require('./src/middlewares/res.hender')
+const usersRouter = require('./src/routes/users');
+const profissionalsRouter = require('./src/routes/professionals');
+const dashRouter = require('./src/routes/dash');
+const loginRouter = require('./src/routes/login');
+const serverRouter = require('./src/routes/servico');
+const agendamentosRouter = require('./src/routes/agendamentos')
+const resHeader = require('./src/middlewares/res.header')
 
-var app = express();
+const app = express();
 
 app.use(cors(corsOptions));
 app.use(session({
@@ -38,6 +39,7 @@ app.use('/login', loginRouter);
 app.use('/profissionals', profissionalsRouter);
 app.use('/dash', dashRouter);
 app.use('/servico', serverRouter);
+app.use('/agendamentos', agendamentosRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -45,7 +47,7 @@ app.use(function (req, res, next) {
 });
 
 // error handler
-app.use(function (err, req, res, next) {
+app.use(function (err, req, res) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
