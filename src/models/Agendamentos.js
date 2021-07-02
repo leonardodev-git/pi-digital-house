@@ -1,3 +1,4 @@
+const { v4: uuidv4 } = require('uuid');
 'use strict';
 const {
   Model
@@ -13,6 +14,12 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Agendamentos.init({
+    id: {
+      type: DataTypes.STRING,
+      primaryKey: true,
+      allowNull: false,
+      defaultValue: () => uuidv4(),
+    },
     Start: DataTypes.DATE,
     End: DataTypes.DATE
   }, {

@@ -1,12 +1,13 @@
+const { v4: uuidv4 } = require('uuid');
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('Agendamentos', {
       id: {
-        allowNull: false,
-        autoIncrement: true,
+        type: Sequelize.STRING,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        allowNull: false,
+        defaultValue: uuidv4()
       },
       Start: {
         allowNull: false,
@@ -21,7 +22,7 @@ module.exports = {
       },
       Profissional_ID: {
         allowNull: false,
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         references: {
           model: 'Profissionais',
           key: 'id'
@@ -29,7 +30,7 @@ module.exports = {
       },
       Cliente_ID: {
         allowNull: false,
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         references: {
           model: 'Clientes',
           key: 'id'
@@ -37,7 +38,7 @@ module.exports = {
       },
       Servico_ID: {
         allowNull: false,
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         references: {
           model: 'Servicos',
           key: 'id'

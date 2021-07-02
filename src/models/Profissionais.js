@@ -1,3 +1,4 @@
+const { v4: uuidv4 } = require('uuid');
 'use strict';
 const {
   Model
@@ -12,6 +13,12 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Profissionais.init({
+    id: {
+      type: DataTypes.STRING,
+      primaryKey: true,
+      allowNull: false,
+      defaultValue: () => uuidv4(),
+    },
     nome: DataTypes.STRING,
     sobrenome: DataTypes.STRING,
     avatar: DataTypes.STRING
