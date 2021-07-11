@@ -6,22 +6,20 @@ var logger = require('morgan');
 var session = require('express-session')
 const cors = require('cors')
 
+let corsOptions = {
+  origin: "http://localhost:3000"
+}
 
-
-
-
-var indexRouter = require('./src/routes/index');
+var usersRouter = require('./src/routes/users');
+var profissionalsRouter = require('./src/routes/professionals')
 var dashRouter = require('./src/routes/dash');
 var loginRouter = require('./src/routes/login');
 var serverRouter = require('./src/routes/servico');
+var resHeader = require('./src/middlewares/res.hender')
 
 var app = express();
 
-// view engine setup
-app.set('views', path.join("./src", 'views'));
-app.set('view engine', 'ejs');
-
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(session({
   secret: 'projeto Intregrador Devsix',
   resave: true,
@@ -32,10 +30,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(resHeader)
 
-app.use('/', indexRouter);
-app.use('/dash', dashRouter);
+
+app.use('/users', usersRouter);
 app.use('/login', loginRouter);
+app.use('/profissionals', profissionalsRouter);
+app.use('/dash', dashRouter);
 app.use('/servico', serverRouter);
 
 // catch 404 and forward to error handler
@@ -51,7 +52,7 @@ app.use(function (err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.json('error');
 });
 
 module.exports = app;

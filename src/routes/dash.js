@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-let auth = require('../middlewares/auth')
+let auth = require('../middlewares/validingInputs')
 var dashController = require('../controllers/dashController')
 
 
