@@ -1,15 +1,10 @@
-const { default: axios } = require('axios');
-const { Servico } = require('../models');
-
 const teste = (req, res) => {
   const agendamento = [];
-  agendamento.push(req.body)
-  console.log(agendamento)
-
-}
+  agendamento.push(req.body);
+};
 
 const events = async (req, res) => {
-  const { start, end } = req.body //como pegar esse cara
+  const { start, end } = req.body; //como pegar esse cara
 
   const createEvent = {
     title,
@@ -18,11 +13,9 @@ const events = async (req, res) => {
   };
 
   return createEvent;
-}
-
-
+};
 
 module.exports = {
   teste,
-  events
+  events,
 };
