@@ -29,7 +29,7 @@ module.exports = {
       updatedAt: '2021-06-06 18:30:22'
     },
     {
-      id: uuidv4(),
+      id: "6fa577c3-538b-40a1-82b1-2d5e8f11bd49",
       nome: 'Guilherme',
       sobrenome: 'Totoli',
       avatar: 'https://bit.ly/3gHnAjD',
@@ -37,7 +37,7 @@ module.exports = {
       updatedAt: '2021-06-06 18:30:22'
     },
     {
-      id: uuidv4(),
+      id: "e35ebdc8-ff06-43be-aa5f-f957093ba4d0",
       nome: 'Jonas',
       sobrenome: 'Lobo',
       avatar: 'https://bit.ly/3d32av5',
@@ -45,7 +45,7 @@ module.exports = {
       updatedAt: '2021-06-06 18:30:22'
     },
     {
-      id: uuidv4(),
+      id: "9c4b2fb5-502e-4e3a-8576-dffda9998078",
       nome: 'João',
       sobrenome: 'Marcos',
       avatar: 'https://bit.ly/2SS71se',
@@ -53,7 +53,7 @@ module.exports = {
       updatedAt: '2021-06-06 18:30:22'
     },
     {
-      id: uuidv4(),
+      id: "003749d1-aa24-4dc9-9327-596fa54a3e7d",
       nome: 'Renato',
       sobrenome: 'Napoli',
       avatar: 'https://bit.ly/3xx8Olc',
@@ -61,7 +61,7 @@ module.exports = {
       updatedAt: '2021-06-06 18:30:22'
     },
     {
-      id: uuidv4(),
+      id: "5d732d8c-3c8c-46dc-9829-dd261a58f98d",
       nome: 'Julia',
       sobrenome: 'Ramos',
       avatar: 'https://bit.ly/3cZDHqD',
@@ -69,7 +69,7 @@ module.exports = {
       updatedAt: '2021-06-06 18:30:22'
     },
     {
-      id: uuidv4(),
+      id: "dd41ee1e-8b48-4675-a7cb-da7ff590a6ca",
       nome: 'Pedro',
       sobrenome: 'Braga',
       avatar: 'https://bit.ly/3gZlrP4',

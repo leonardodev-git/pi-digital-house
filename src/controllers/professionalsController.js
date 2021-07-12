@@ -1,22 +1,21 @@
-let querys = require('../db/professionalQuerys')
-let treatData = require('../db/treatData')
+let querys = require("../db/professionalQuerys");
+let treatData = require("../db/treatData");
 
 let all = async (req, res) => {
-    let allProfissionals = await querys.listAll()
+  let allProfissionals = await querys.listAll();
 
-    res.status(200).json({ allProfissionals })
-}
+  res.status(200).json({ allProfissionals });
+};
 
 let details = async (req, res) => {
-
-    let allDetails = await querys.getProfissional(req.params.id)
-    if (allDetails) {
-        let professionalDetails = treatData.informationAndServices(allDetails)
-        res.status(200).json({ professionalDetails })
-    }
-    res.status(400).json({ messege: 'Professional not found!' })
-}
+  let allDetails = await querys.getProfissional(req.params.id);
+  if (allDetails) {
+    let professionalDetails = treatData.informationAndServices(allDetails);
+    res.status(200).json({ professionalDetails });
+  }
+  res.status(400).json({ messege: "Professional not found!" });
+};
 module.exports = {
-    all,
-    details
-}
+  all,
+  details,
+};
