@@ -17,6 +17,10 @@ Login:
 	"senha": "xxxxxxx"
 }
 
+Update user:
+	put http://localhost:5000/users
+
+
 Listar profissionais:
 	GET http://localhost:5000/profissionals/all/
 

@@ -7,9 +7,6 @@ module.exports = (sequelize, DataTypes) => {
   class Agendamentos extends Model {
 
     static associate(models) {
-      Agendamentos.belongsTo(models.Servicos, { foreignKey: 'Profissional_ID' });
-      Agendamentos.belongsTo(models.Clientes, { foreignKey: 'Cliente_ID' });
-      Agendamentos.belongsTo(models.Profissionais, { foreignKey: 'Servico_ID' });
 
     }
   };
@@ -21,7 +18,8 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: () => uuidv4(),
     },
     Start: DataTypes.DATE,
-    End: DataTypes.DATE
+    End: DataTypes.DATE,
+    Title: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'Agendamentos',

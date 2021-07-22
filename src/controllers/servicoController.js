@@ -4,12 +4,12 @@ const teste = (req, res) => {
 };
 
 const events = async (req, res) => {
-  const { start, end } = req.body; //como pegar esse cara
+  const { start, end, title } = req.body; //como pegar esse cara
 
   const createEvent = {
     title,
-    startt,
-    endd,
+    start,
+    end,
   };
 
   return createEvent;

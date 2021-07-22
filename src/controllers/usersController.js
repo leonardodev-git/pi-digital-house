@@ -25,7 +25,7 @@ const create = async (req, res) => {
 const deletar = async (req, res) => {
     try {
         await userQuery.deletar(req.userId)
-        res.status(204).json({ message: "Users successfully update!" });
+        res.status(200).json({ message: "Users successfully deleted!", front: "Que pena, espero que volte em breve!" });
     } catch (error) {
         res.status(500).json({ message: error });
     }
@@ -35,7 +35,7 @@ const update = async (req, res) => {
 
     try {
         await userQuery.update(req.body, req.userId)
-        res.status(200).json({ message: "Users successfully update!" });
+        res.status(200).json({ message: "Users successfully update!", front: "Os seus dados foram atualizados!" });
     } catch (error) {
         res.status(500).json({ message: error });
     }

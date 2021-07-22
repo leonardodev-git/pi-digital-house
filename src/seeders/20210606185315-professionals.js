@@ -8,7 +8,7 @@ module.exports = {
       id: '57441633-887e-459b-aba4-837cede9b3f6',
       nome: 'Bruno',
       sobrenome: 'Guedes',
-      avatar: 'https://bit.ly/2SKi5HZ',
+      avatar: 'https://bit.ly/3hchC9m',
       createdAt: '2021-06-06 18:30:22',
       updatedAt: '2021-06-06 18:30:22'
     },

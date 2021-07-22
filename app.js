@@ -14,6 +14,7 @@ var usersRouter = require("./src/routes/users");
 var profissionalsRouter = require("./src/routes/professionals");
 var loginRouter = require("./src/routes/login");
 var serverRouter = require("./src/routes/servico");
+var agendamentoRouter = require("./src/routes/agendamento");
 var resHeader = require("./src/middlewares/res.hender");
 
 var app = express();
@@ -37,6 +38,7 @@ app.use("/users", usersRouter);
 app.use("/login", loginRouter);
 app.use("/profissionals", profissionalsRouter);
 app.use("/servico", serverRouter);
+app.use("/agendamento", agendamentoRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

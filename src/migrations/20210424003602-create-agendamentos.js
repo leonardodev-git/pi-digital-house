@@ -16,35 +16,10 @@ module.exports = {
       End: {
         type: Sequelize.DATE
       },
-      Valor_Total: {
-        allowNull: false,
-        type: Sequelize.FLOAT,
-      },
-      Profissional_ID: {
-        allowNull: false,
-        type: Sequelize.STRING,
-        references: {
-          model: 'Profissionais',
-          key: 'id'
-        }
-      },
-      Cliente_ID: {
-        allowNull: false,
-        type: Sequelize.STRING,
-        references: {
-          model: 'Clientes',
-          key: 'id'
-        }
-      },
-      Servico_ID: {
-        allowNull: false,
-        type: Sequelize.STRING,
-        references: {
-          model: 'Servicos',
-          key: 'id'
-        }
-      },
-
+     TItle: {
+       allowNull: false,
+       type: Sequelize.STRING
+     },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

@@ -1,4 +1,4 @@
-const { Profissionais, Servicos } = require('../models');
+const { Agendamentos } = require('../models');
 
 const listAll = () => Profissionais.findAll()
 
@@ -7,8 +7,8 @@ let getProfissional = (paramId) => {
         where: {
             id: paramId
         }, include: [{
-            model: Servicos,
-            attributes: ['nome']
+            model: Agendamentos,
+            attributes: ['title']
 
         }]
     })
