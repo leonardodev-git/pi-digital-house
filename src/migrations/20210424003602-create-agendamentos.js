@@ -9,14 +9,14 @@ module.exports = {
         allowNull: false,
         defaultValue: uuidv4()
       },
-      Start: {
+      start: {
         allowNull: false,
         type: Sequelize.DATE
       },
-      End: {
+      end: {
         type: Sequelize.DATE
       },
-     TItle: {
+     title: {
        allowNull: false,
        type: Sequelize.STRING
      },

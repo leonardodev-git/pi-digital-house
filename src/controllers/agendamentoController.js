@@ -1,19 +1,19 @@
-const Agendamentos = require("../models/Agendamentos");
+const { Agendamentos } = require("../models");
 
 const createSchedule = async (req, res) => {
-    let errors = validationResult(req);
-
-    if (errors.isEmpty()) {
-        const { Start, End, Title } = req.body;
+  
+  try {
         let newSchedule = {
-          Start,
-          End,
-          Title,
+          start: req.body.start,
+          end: req.body.end, 
+          title: req.body.title
         };
         await Agendamentos.create(newSchedule)
-        res.status(201).json({ message: "Schedule successfully created!" });
+        res.status(200).json({ message: "Schedule successfully created!" });
+      }
+      catch {
+     res.status(400).json({ Error: 'Deu ruim'} )
     }
-    res.status(400).json({ messenger: errors.errors })
 }
   
   module.exports = {

@@ -17,9 +17,9 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       defaultValue: () => uuidv4(),
     },
-    Start: DataTypes.DATE,
-    End: DataTypes.DATE,
-    Title: DataTypes.STRING,
+    start: DataTypes.DATE,
+    end: DataTypes.DATE,
+    title: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'Agendamentos',
