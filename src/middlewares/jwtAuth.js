@@ -1,8 +1,7 @@
 const jwt = require('jsonwebtoken')
 const config = require('../config/jwtConfig')
-const models = require('../models')
-
-const user = models.cliente
+// const models = require('../models')
+// const user = models.cliente
 
 const verifyToken = (req, res, next) => {
     let token = req.headers["x-access-token"]

@@ -14,8 +14,7 @@ var usersRouter = require("./src/routes/users");
 var profissionalsRouter = require("./src/routes/professionals");
 var loginRouter = require("./src/routes/login");
 var serverRouter = require("./src/routes/servico");
-var agendamentoRouter = require("./src/routes/agendamento");
-var resHeader = require("./src/middlewares/res.hender");
+var resHeader = require("./src/middlewares/res.header");
 
 var app = express();
 
@@ -38,7 +37,6 @@ app.use("/users", usersRouter);
 app.use("/login", loginRouter);
 app.use("/profissionals", profissionalsRouter);
 app.use("/servico", serverRouter);
-app.use("/agendamento", agendamentoRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -46,7 +44,7 @@ app.use(function (req, res, next) {
 });
 
 // error handler
-app.use(function (err, req, res, next) {
+app.use(function (err, req, res) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get("env") === "development" ? err : {};
