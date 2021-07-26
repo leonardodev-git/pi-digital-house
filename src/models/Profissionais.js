@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
       Profissionais.hasMany(models.Servicos, { foreignKey: "profissional_ID" });
 
     }
-  };
+  }
   Profissionais.init({
     id: {
       type: DataTypes.STRING,

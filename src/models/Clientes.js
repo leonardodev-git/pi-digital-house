@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
       Clientes.hasMany(models.Agendamentos);
 
     }
-  };
+  }
 
 
   Clientes.init({

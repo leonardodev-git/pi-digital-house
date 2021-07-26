@@ -6,13 +6,11 @@ const teste = (req, res) => {
 const events = async (req, res) => {
   const { start, end, title } = req.body; //como pegar esse cara
 
-  const createEvent = {
+  return {
     title,
     start,
     end,
   };
-
-  return createEvent;
 };
 
 module.exports = {

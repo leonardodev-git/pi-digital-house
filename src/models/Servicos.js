@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
       Servicos.hasMany(models.Agendamentos);
       Servicos.belongsTo(models.Profissionais, { foreignKey: 'Profissional_ID' });
     }
-  };
+  }
   Servicos.init({
     id: {
       type: DataTypes.STRING,

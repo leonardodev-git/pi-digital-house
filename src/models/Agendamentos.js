@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
 
     }
-  };
+  }
   Agendamentos.init({
     id: {
       type: DataTypes.STRING,

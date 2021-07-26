@@ -1,7 +1,7 @@
 const { validationResult } = require('express-validator');
 const { Clientes } = require('../models');
 const bcrypt = require('bcrypt')
-const userQuery = require('../db/userQuerys')
+const userQuery = require('../db/userQueries')
 
 
 const create = async (req, res) => {

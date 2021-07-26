@@ -1,4 +1,4 @@
-let querys = require("../db/professionalQuerys");
+let querys = require("../db/professionalQueries");
 let treatData = require("../db/treatData");
 
 let all = async (req, res) => {
